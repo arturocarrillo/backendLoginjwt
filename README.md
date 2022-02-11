@@ -28,9 +28,10 @@
 
 > git push -u origin main
 
-## project 
+## project
 ---------------------------------------------------------------------------------
 ## download node modules
+
 sudo npm install --yes
 
 ## run project
