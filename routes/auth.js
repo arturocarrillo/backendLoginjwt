@@ -30,7 +30,7 @@ router.post('/login', async(req, res) => {
     const validPassword = await bcrypt.compare(req.body.password, user.password);
     if (!validPassword) return res.status(400).json({ error: 'contraseña no válida' })
 
-    // create token
+    /* create token */
     const token = jwt.sign({
         name: user.name,
         id: user._id
@@ -41,6 +41,7 @@ router.post('/login', async(req, res) => {
         data: 'exito bienvenido',
         token: token
     })
+
 })
 
 router.post('/register', async(req, res) => {
